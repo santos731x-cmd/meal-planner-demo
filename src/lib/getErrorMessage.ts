@@ -1,5 +1,5 @@
 //import { Prisma } from "@prisma/client";
-import { Prisma } from "../../prisma/generated/prisma/client";
+import { Prisma } from "../../generated/prisma/client";
 import { fromError } from "zod-validation-error";
 
 import { ZodError } from "zod";

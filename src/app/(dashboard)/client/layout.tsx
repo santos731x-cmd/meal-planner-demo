@@ -1,5 +1,5 @@
 import { auth } from "@/lib/auth";
-import { Role } from "../../../../prisma/generated/prisma/client";
+import { Role } from "../../../../generated/prisma/client";
 import { redirect } from "next/navigation";
 import { ReactNode } from "react";
 
