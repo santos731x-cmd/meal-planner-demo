@@ -29,6 +29,7 @@ export default function Page() {
             width={500}
             height={400}
             className="rounded-xl shadow-lg"
+            loading="eager"
           />
         </div>
       </div>

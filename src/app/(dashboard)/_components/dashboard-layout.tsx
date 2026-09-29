@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import {motion} from "motion/react";
 import * as Collapsible from "@radix-ui/react-collapsible";
-import { Apple, Boxes, ChevronDown, ChevronLeft, LogOut, Menu, Ruler,Utensils} from "lucide-react";
+import { User,ClipboardClock, Apple, Boxes, ChevronDown, ChevronLeft, LogOut, Menu, Ruler,Utensils} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {ReactNode,useState} from "react";
@@ -35,6 +35,14 @@ const ROUTE_GROUPS: RouteGroupType[] = [
       { href: "/admin/foods-management/serving-units", label: "Serving Units", icon: <Ruler className="mr-2 size-3" /> },
     ],
   },
+  {
+    group: "Users Management",
+    items: [
+      { href: "/admin/users-management/users", label: "Users", icon: <User className="mr-2 size-3" /> },
+      { href: "/admin/users-management/consulting", label: "Consulting", icon: <ClipboardClock className="mr-2 size-3" /> },
+
+    ],
+  },  
   {
     group: "Meals Management",
     items: [
@@ -104,7 +112,7 @@ const DashboardLayout = ({children,session}: DashLayoutProps) => {
 
   const filteredRouteGroups = ROUTE_GROUPS.filter((group) => {
     if (userRole === "ADMIN") {
-      return group.group === "Foods Management";
+      return group.group === "Foods Management" || group.group === "Meals Management" || group.group === "Users Management";
     } else {
       return group.group === "Meals Management";
     }
