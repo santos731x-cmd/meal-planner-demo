@@ -9,7 +9,7 @@
     "lint": "eslint",
     "db:migrate": "prisma migrate dev",
     "db:studio": "prisma studio",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate && next build"
   },
   "dependencies": {
     "@base-ui/react": "^1.8.0",
