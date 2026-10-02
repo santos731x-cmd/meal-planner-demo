@@ -9,7 +9,7 @@ import db from "@/lib/db";
 import { PaginatedResult } from "@/lib/types/paginatedResults";
 import { toStringSafe } from "@/lib/utils";
 //import { Prisma } from "@prisma/client";
-import { Prisma } from "../../../../../../../prisma/generated/prisma/client";
+import { Prisma } from "../../../../../../../generated/prisma/client";
 
 type FoodWithServingUnits = Prisma.FoodGetPayload<{
   include: {

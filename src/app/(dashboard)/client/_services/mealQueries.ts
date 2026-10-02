@@ -8,7 +8,7 @@ import { MealSchema } from "@/app/(dashboard)/client/_types/mealSchema";
 import { auth } from "@/lib/auth";
 import db from "@/lib/db";
 import { toStringSafe } from "@/lib/utils";
-import { Prisma } from "../../../../../prisma/generated/prisma/client";
+import { Prisma } from "../../../../../generated/prisma/client";
 
 const getMeals = async (filters: MealFiltersSchema) => {
   const validatedFilters = mealFiltersSchema.parse(filters);
